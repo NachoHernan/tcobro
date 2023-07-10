@@ -4,8 +4,10 @@ using tcobro_API.Datos;
 using tcobro_API.Modelos;
 
 var builder = WebApplication.CreateBuilder(args);
+    
+             /*Servicios a consumir*/
 
-//Servicios a consumir
+
 builder.Services.AddControllers().AddNewtonsoftJson();//Paquete instalado
 //Servicios ya predefinidos en VisualStudio
 builder.Services.AddControllers();
@@ -16,6 +18,9 @@ builder.Services.AddSwaggerGen();
 //Relacion clase 'ApplicationDbContext' con cadena de conexion y con MySQL
 var connectionString = builder.Configuration.GetConnectionString("AppDbConnectionString");
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+
+//Servicio de Automapper
+builder.Services.AddAutoMapper(typeof(MappingConfig));
 
 var app = builder.Build();
 

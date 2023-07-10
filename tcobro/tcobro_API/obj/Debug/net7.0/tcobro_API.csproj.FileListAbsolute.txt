@@ -45,3 +45,5 @@ C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro\tcobro_API\bi
 C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro\tcobro_API\bin\Debug\net7.0\MySqlConnector.dll
 C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro\tcobro_API\bin\Debug\net7.0\Pomelo.EntityFrameworkCore.MySql.dll
 C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro\tcobro_API\bin\Debug\net7.0\System.CodeDom.dll
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro\tcobro_API\bin\Debug\net7.0\AutoMapper.dll
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro\tcobro_API\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

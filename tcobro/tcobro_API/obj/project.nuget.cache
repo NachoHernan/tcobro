@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "xyavIwJNkUkHyziNJBEIU+WMRlXT64e+5Ycp7lGFIu7inqe0e3r3MWMa3vBvYZVpo7L5DfAvIQxUdcG3TM7FiQ==",
+  "dgSpecHash": "zx19r/gCrhX/urA5OCwc5ervAWjQEZYHU3K2QTiQrBITTNl4Zr/ypbzhMGG4vP2U5bGeYSNSVTmYVn4PJipHqA==",
   "success": true,
   "projectFilePath": "C:\\SP\\OneDrive - Sistemas de T-Cobro S.L\\Desarrollo\\Estable\\tcobro\\tcobro_API\\tcobro_API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Nacho\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\Nacho\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\Nacho\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Nacho\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\7.0.8\\microsoft.aspnetcore.jsonpatch.7.0.8.nupkg.sha512",
     "C:\\Users\\Nacho\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\7.0.8\\microsoft.aspnetcore.mvc.newtonsoftjson.7.0.8.nupkg.sha512",

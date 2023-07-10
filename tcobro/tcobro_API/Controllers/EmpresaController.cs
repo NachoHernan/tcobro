@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -13,10 +14,12 @@ namespace tcobro_API.Controllers
     public class EmpresaController : ControllerBase
     {
         private readonly ApplicationDbContext _db;
+        private readonly IMapper _mapper;
 
-        public EmpresaController(ApplicationDbContext db)
+        public EmpresaController(ApplicationDbContext db, IMapper mapper)
         {
             _db = db;
+            _mapper = mapper;
         }
 
 
@@ -24,10 +27,13 @@ namespace tcobro_API.Controllers
         /*Obtener todas las empresas*/
         [HttpGet]//Define la ruta
         [ProducesResponseType(StatusCodes.Status200OK)] //Documenta el codigo de estado
-        public ActionResult<IEnumerable<EmpresaDTO>> GetEmpresas()
+        public async Task<ActionResult<IEnumerable<EmpresaDTO>>> GetEmpresas()
         {
-            //Accede a los datos de EmpresaStore
-            return Ok(_db.empresas.ToList());
+            //Accede a los datos de empresas y lo devuelve en forma de lista
+            IEnumerable<Empresa> empresaList = await _db.empresas.ToListAsync();
+
+            //Uso de Automapper para retornar la lista
+            return Ok(_mapper.Map<IEnumerable<EmpresaDTO>>(empresaList));
         }
 
         /*Obtener solo una Empresa*/
@@ -35,21 +41,22 @@ namespace tcobro_API.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)] 
         [ProducesResponseType(StatusCodes.Status400BadRequest)] 
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public ActionResult<EmpresaDTO> GetEmpresa(int id)
+        public async Task<ActionResult<EmpresaDTO>> GetEmpresa(int id)
         {
             if(id == 0)
             {
                 return BadRequest();
             }
 
-            var empresa = _db.empresas.FirstOrDefault(v => v.Id == id);
+            var empresa = await _db.empresas.FirstOrDefaultAsync(v => v.Id == id);
 
             if(empresa == null)
             {
                 return NotFound();
             }
 
-            return Ok(empresa);
+            //Uso de Automapper para retornar la lista
+            return Ok(_mapper.Map<EmpresaDTO>(empresa));
         }
 
         //Crear una empresa
@@ -58,7 +65,7 @@ namespace tcobro_API.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)] 
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
 
-        public ActionResult<EmpresaDTO> CrearEmpresa([FromBody] EmpresaDTO empresaDTO) //FromBody indica que va a recibir datos
+        public async Task<ActionResult<EmpresaDTO>> CrearEmpresa([FromBody] EmpresaCreateDTO empresaCreateDTO) //FromBody indica que va a recibir datos
         {
             //Verifica si las propiedades son validas (requerido..lenght..)
             if(!ModelState.IsValid)
@@ -66,33 +73,26 @@ namespace tcobro_API.Controllers
                 return BadRequest(ModelState);
             }
             //Validacion personalizada
-            if(_db.empresas.FirstOrDefault(e => e.Nombre.ToLower() == empresaDTO.Nombre.ToLower()) != null)
+            if(await _db.empresas.FirstOrDefaultAsync(e => e.Nombre.ToLower() == empresaCreateDTO.Nombre.ToLower()) != null)
             {
                 ModelState.AddModelError("NombreExiste", "La empresa con ese Nombre ya existe");
                 return BadRequest(ModelState);
             }
-            if(empresaDTO == null)
+            if(empresaCreateDTO == null)
                 {
-                    return BadRequest(empresaDTO);
+                    return BadRequest(empresaCreateDTO);
                 }
-            if(empresaDTO.Id > 0)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError);
-            }
-
-            //Recoge los datos
-            Empresa modelo = new()
-            {
-                Nombre = empresaDTO.Nombre
-            };
+            
+            //Recoge los datos mediante Automapper
+            Empresa modelo = _mapper.Map<Empresa>(empresaCreateDTO);
 
             //Agrega el registro a la BBDD(INSERT)
-            _db.Add(modelo);
+            await _db.AddAsync(modelo);
             //Guarda cambios en la BBDD
-            _db.SaveChanges();
+            await _db.SaveChangesAsync();
 
             //Se dirige a la ruta indicada creando un nuevo registro pasandole los campos
-            return CreatedAtRoute("GetEmpresa", new {id = empresaDTO.Id}, empresaDTO);
+            return CreatedAtRoute("GetEmpresa", new {id = modelo.Id}, modelo);
         }
 
         [HttpDelete("{id}")]
@@ -100,14 +100,14 @@ namespace tcobro_API.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         //Se utiliza I-ActionResult por no necesitar el modelo,siempre que se usa delete usar NoContent()
-        public IActionResult DeleteEmpresa(int id)
+        public async Task<IActionResult> DeleteEmpresa(int id)
         {
             if(id == 0)
             {
                 return BadRequest();
             }
             
-            var empresa = _db.empresas.FirstOrDefault(e => e.Id == id);
+            var empresa = await _db.empresas.FirstOrDefaultAsync(e => e.Id == id);
 
             if(empresa == null)
             {
@@ -115,10 +115,10 @@ namespace tcobro_API.Controllers
             }
 
             //Borra registro de la BBDD(DELETE)
-            _db.empresas.Remove(empresa);
+            _db.empresas.Remove(empresa);//No existe async en Remove()
 
             //Guarda cambios en la BBDD
-            _db.SaveChanges();
+            await _db.SaveChangesAsync();
 
             return NoContent();
         }
@@ -126,24 +126,21 @@ namespace tcobro_API.Controllers
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult UpdateEmpresa(int id, [FromBody] EmpresaDTO empresaDTO)
+        public async Task<IActionResult> UpdateEmpresa(int id, [FromBody] EmpresaUpdateDTO empresaUpdateDTO)
         {
-            if(empresaDTO == null || id != empresaDTO.Id)
+            if(empresaUpdateDTO == null || id != empresaUpdateDTO.Id)
             {
                 return BadRequest();
             }
 
-            Empresa modelo = new()
-            {
-                Id = empresaDTO.Id,
-                Nombre = empresaDTO.Nombre
-            };
+            //Recoge los datos mediante Automapper
+            Empresa modelo = _mapper.Map<Empresa>(empresaUpdateDTO);
 
             //Actualiza el registro a la BBDD(UPDATE)
-            _db.empresas.Update(modelo);
+            _db.empresas.Update(modelo);//No existe async en Update()
 
             //Guarda cambios en la BBDD
-            _db.SaveChanges();
+            await _db.SaveChangesAsync();
 
             return NoContent();
         }
@@ -153,46 +150,38 @@ namespace tcobro_API.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         //Utilizar en API solo propiedades  "path": "/nombre","op": "replace","value": "Nueva Empresa"
         //JsonPatchDocument para llamar a la libreria del paquete instalado de tipo VillaDto
-        public IActionResult UpdatePartialEmpresa(int id, JsonPatchDocument<EmpresaDTO> patchDTO)
+        public async Task<IActionResult> UpdatePartialEmpresa(int id, JsonPatchDocument<EmpresaUpdateDTO> empresaUpdateParcialDTO)
         {
-            if (patchDTO == null || id == 0)
+            if (empresaUpdateParcialDTO == null || id == 0)
             {
                 return BadRequest();
             }
 
-            var empresa = _db.empresas.AsNoTracking().FirstOrDefault(e => e.Id == id);//AsNoTracking para que no de error
+            var empresa = await _db.empresas.AsNoTracking().FirstOrDefaultAsync(e => e.Id == id);//AsNoTracking para que no de error
 
             //Registro en memoria
-            EmpresaDTO empresaDTO = new()
-            {
-                Id = empresa.Id,
-                Nombre = empresa.Nombre
-            };
+            EmpresaUpdateDTO empresaUpdateDTO = _mapper.Map<EmpresaUpdateDTO>(empresa);
 
             if(empresa == null)
             {
                 return BadRequest();
             }
 
-            patchDTO.ApplyTo(empresaDTO, ModelState);
+            empresaUpdateParcialDTO.ApplyTo(empresaUpdateDTO, ModelState);
 
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            //Registro actualizado en la BBDD
-            Empresa modelo = new()
-            {
-                Id = empresaDTO.Id,
-                Nombre = empresaDTO.Nombre
-            };
+            //Registro actualizado en la BBDD con Automapper
+            Empresa modelo = _mapper.Map<Empresa>(empresaUpdateParcialDTO);
 
             //Actualiza el registro a la BBDD(UPDATE)
-            _db.empresas.Update(modelo);
+            _db.empresas.Update(modelo);//No existe async en Update()
 
             //Guarda cambios en la BBDD
-            _db.SaveChanges();
+            await _db.SaveChangesAsync();
 
             return NoContent();
         }
