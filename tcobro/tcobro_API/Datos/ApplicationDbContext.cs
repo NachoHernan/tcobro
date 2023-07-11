@@ -10,7 +10,15 @@ namespace tcobro_API.Datos
 
         }
 
-        public DbSet<Empresa> empresas { get; set; }
-        
+        //Creaccion de tablas en la BBDD
+        public DbSet<Empresa> Empresas { get; set; }
+        public DbSet<Maquina> Maquinas { get; set; }
+
+        //Habilita modificacion de BBDD por EntityFramework
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
+
     }
 }

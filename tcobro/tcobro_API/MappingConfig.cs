@@ -14,11 +14,16 @@ namespace tcobro_API
     {
         public MappingConfig()
         {
+            //Empresa
             CreateMap<Empresa, EmpresaDTO>().ReverseMap(); //Fuente , Destino //ReverseMap para hacer tambien el mapeo a la inversa
-
             CreateMap<Empresa, EmpresaCreateDTO>().ReverseMap();
-
             CreateMap<Empresa, EmpresaUpdateDTO>().ReverseMap();
+
+            //Maquina
+            CreateMap<Maquina, MaquinaDTO>().ReverseMap();
+            CreateMap<Maquina, MaquinaCreateDTO>().ReverseMap();
+            CreateMap<Maquina, MaquinaUpdateDTO>().ReverseMap();
+
         }
     }
 }
