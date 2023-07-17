@@ -18,6 +18,7 @@ namespace tcobro_API.Modelos
         [MaxLength(45)]
         public string Descripcion { get; set; }
 
+        [Required]
         public int EmpresaId { get; set; }
 
         [ForeignKey("EmpresaId")] //Relacion de campo EmpresaId con tabla Empresa manteniendo nombre Empresa

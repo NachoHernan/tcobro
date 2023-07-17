@@ -8,6 +8,7 @@ namespace tcobro_API.Modelos.Dto
     {
         [Required]
         public int Id { get; set; }
+
         [Required]
         [MaxLength(100)]
         public string Nombre { get; set; }

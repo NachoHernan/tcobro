@@ -32,15 +32,15 @@ namespace tcobro_API.Controllers
 
 
 
-        /*Obtener todas las empresas*/
+        /*Obtener todas las maquinas*/
         [HttpGet]//Define la ruta
         [ProducesResponseType(StatusCodes.Status200OK)] //Documenta el codigo de estado
         public async Task<ActionResult<APIResponse>> GetMaquinas()
         {
             try
             {
-                //Accede a los datos de empresas y lo devuelve en forma de lista
-                IEnumerable<Maquina> maquinaList = await _maquinaRepositorio.ObtenerTodos();
+                //Accede a los datos de maquinas y lo devuelve en forma de lista
+                IEnumerable<Maquina> maquinaList = await _maquinaRepositorio.ObtenerTodos(incluirPropiedades:"Empresa");
 
                 //Uso de Automapper para retornar la lista
                 _response.Resultado = _mapper.Map<IEnumerable<MaquinaDTO>>(maquinaList);
@@ -58,8 +58,8 @@ namespace tcobro_API.Controllers
             return _response;
         }
 
-        /*Obtener solo una Empresa*/
-        [HttpGet("{id}", Name = "GetMaquina")] //Parametro por el cual se borra - Ruta del metodo
+        /*Obtener solo una Maquina*/
+        [HttpGet("{id:int}", Name = "GetMaquina")] //Parametro por el cual se borra - Ruta del metodo
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -74,7 +74,7 @@ namespace tcobro_API.Controllers
                     return BadRequest(_response);
                 }
 
-                var maquina = await _maquinaRepositorio.Obtener(m => m.Id == id);
+                var maquina = await _maquinaRepositorio.Obtener(m => m.Id == id, incluirPropiedades: "Empresa");
 
                 if (maquina == null)
                 {
@@ -116,17 +116,17 @@ namespace tcobro_API.Controllers
                 //Validacion personalizada
                 if (await _maquinaRepositorio.Obtener(m => m.NumeroDeSerie == maquinaCreateDTO.NumeroDeSerie) != null)
                 {
-                    ModelState.AddModelError("NumeroDeSerieExiste", "El numero de serie ya existe");
+                    ModelState.AddModelError("ErrorMessages", "El numero de serie ya existe");
                     return BadRequest(ModelState);
                 }
-                if (await _maquinaRepositorio.Obtener(m => m.Id == maquinaCreateDTO.Id) != null)
+                if (await _maquinaRepositorio.Obtener(m => m.NumeroDeSerie == maquinaCreateDTO.NumeroDeSerie) != null)
                 {
-                    ModelState.AddModelError("IdMaquinaExiste", "El id de la maquina ya existe");
+                    ModelState.AddModelError("ErrorMessages", "El id de la maquina ya existe");
                     return BadRequest(ModelState);
                 }
                 if (await _empresaRepositorio.Obtener(e=>e.Id == maquinaCreateDTO.EmpresaId) == null) 
                 {
-                    ModelState.AddModelError("ClaveForanea", "El id de la empresa no existe");
+                    ModelState.AddModelError("ErrorMessages", "El id de la empresa no existe");
                     return BadRequest(ModelState);
                 }
                 if (maquinaCreateDTO == null)
@@ -155,7 +155,7 @@ namespace tcobro_API.Controllers
             return _response;
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("{id:int}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -194,7 +194,7 @@ namespace tcobro_API.Controllers
             return BadRequest(_response);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("{id:int}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> UpdateMaquina(int id, [FromBody] MaquinaUpdateDTO maquinaUpdateDTO)//A Update no se le puede pasar el tipo APIResponse por ser una interfaz
@@ -207,7 +207,7 @@ namespace tcobro_API.Controllers
             }
             if (await _empresaRepositorio.Obtener(e=>e.Id == maquinaUpdateDTO.EmpresaId) == null)
             {
-                ModelState.AddModelError("ClaveForanea", "El Id de la Empresa no existe");
+                ModelState.AddModelError("ErrorMessages", "El Id de la Empresa no existe");
                 return BadRequest(ModelState);
             }
 
@@ -221,43 +221,5 @@ namespace tcobro_API.Controllers
             return Ok(_response);
         }
 
-        [HttpPatch("{id}")]
-        [ProducesResponseType(StatusCodes.Status204NoContent)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        //Utilizar en API solo propiedades  "path": "/nombre","op": "replace","value": "Nueva Empresa"
-        //JsonPatchDocument para llamar a la libreria del paquete instalado de tipo VillaDto
-        public async Task<IActionResult> UpdatePartialMaquina(int id, JsonPatchDocument<MaquinaUpdateDTO> maquinaUpdateParcialDTO)
-        {
-            if (maquinaUpdateParcialDTO == null || id == 0)
-            {
-                return BadRequest();
-            }
-
-            var maquina = await _maquinaRepositorio.Obtener(m => m.Id == id, tracked: false);//AsNoTracking para que no de error
-
-            //Registro en memoria
-            MaquinaUpdateDTO maquinaUpdateDTO = _mapper.Map<MaquinaUpdateDTO>(maquina);
-
-            if (maquina == null)
-            {
-                return BadRequest();
-            }
-
-            maquinaUpdateParcialDTO.ApplyTo(maquinaUpdateDTO, ModelState);
-
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            //Registro actualizado en la BBDD con Automapper
-            Maquina modelo = _mapper.Map<Maquina>(maquinaUpdateParcialDTO);
-
-            //Actualiza el registro a la BBDD(UPDATE)
-            await _maquinaRepositorio.Actualizar(modelo);//No existe async en Update()
-
-            _response.statusCode = HttpStatusCode.NoContent;
-            return Ok(_response);
-        }
     }
 }

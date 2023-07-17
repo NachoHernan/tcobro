@@ -7,9 +7,7 @@ namespace tcobro_API.Modelos.Dto
 
     public class MaquinaCreateDTO
     {
-        [Required]
-        public int Id { get; set; }
-
+        
         [Required]
         public int EmpresaId { get; set; }
 

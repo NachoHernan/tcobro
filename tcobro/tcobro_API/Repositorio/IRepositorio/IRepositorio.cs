@@ -9,9 +9,9 @@ namespace tcobro_API.Repositorio.IRepositorio
         Task Crear(T entidad); 
 
         //Devuelve una lista segun la entidad enviada //Expresion para añadir funcion: e => e.Nombre.ToLower() // ? para que no sea obligatorio el filtro
-        Task <List<T>> ObtenerTodos(Expression<Func<T,bool>> ? filtro = null); 
+        Task <List<T>> ObtenerTodos(Expression<Func<T,bool>> ? filtro = null, string? incluirPropiedades = null); 
 
-        Task<T> Obtener(Expression<Func<T,bool>> filtro = null , bool tracked = true);// Tracked para quitar error de AsNoTracking(EmpresaController)
+        Task<T> Obtener(Expression<Func<T,bool>> filtro = null , bool tracked = true, string? incluirPropiedades = null);// Tracked para quitar error de AsNoTracking(EmpresaController)
 
         Task Remover(T entidad);
 

@@ -14,7 +14,6 @@ namespace tcobro_API.Modelos.Dto
         [Required]
         public int EmpresaId { get; set; }
 
-        [Required]
         [MaxLength(45)]
         public string NumeroDeSerie { get; set; }
 

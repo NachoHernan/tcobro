@@ -33,7 +33,7 @@ namespace tcobro_API.Repositorio
             await _db.SaveChangesAsync();
         }
 
-        public async Task<T> Obtener(Expression<Func<T, bool>> filtro = null, bool tracked = true)
+        public async Task<T> Obtener(Expression<Func<T, bool>> filtro = null, bool tracked = true, string? incluirPropiedades = null)
         {
             IQueryable<T> query = dbSet; //Variable de tipo T para poder hacer consultas
 
@@ -46,16 +46,34 @@ namespace tcobro_API.Repositorio
                 query = query.Where(filtro);
             }
 
+            if(incluirPropiedades != null)
+            {
+                //Bucle que separa cada propiedad al encontrarse con una coma y elimina espacios vacios
+                foreach (var incluirProp in incluirPropiedades.Split(new char[] {','}, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(incluirProp);// Incluye en sus datos los datos del modelo Empresa
+                }
+            }
+
             return await query.FirstOrDefaultAsync();
         }
 
-        public async Task<List<T>> ObtenerTodos(Expression<Func<T, bool>>? filtro = null)
+        public async Task<List<T>> ObtenerTodos(Expression<Func<T, bool>>? filtro = null, string? incluirPropiedades = null)
         {
             IQueryable<T> query = dbSet; //Variable de tipo T para poder hacer consultas
 
             if (filtro != null)
             {
                 query = query.Where(filtro);
+            }
+
+            if (incluirPropiedades != null)
+            {
+                //Bucle que separa cada propiedad al encontrarse con una coma y elimina espacios vacios
+                foreach (var incluirProp in incluirPropiedades.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(incluirProp);// Incluye en sus datos los datos del modelo Empresa
+                }
             }
 
             return await query.ToListAsync();

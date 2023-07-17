@@ -56,7 +56,7 @@ namespace tcobro_API.Controllers
         }
 
         /*Obtener solo una Empresa*/
-        [HttpGet("{id}", Name = "GetEmpresa")] //Parametro por el cual se borra - Ruta del metodo
+        [HttpGet("{id:int}", Name = "GetEmpresa")] //Parametro por el cual se borra - Ruta del metodo entre llaves para que no destruya la ruta
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -71,7 +71,7 @@ namespace tcobro_API.Controllers
                     return BadRequest(_response);
                 }
 
-                var empresa = await _empresaRepositorio.Obtener(v => v.Id == id);
+                var empresa = await _empresaRepositorio.Obtener(e => e.Id == id);
 
                 if (empresa == null)
                 {
@@ -84,7 +84,7 @@ namespace tcobro_API.Controllers
                 _response.statusCode = HttpStatusCode.OK;
 
                 //Uso de Automapper para retornar la lista
-                return Ok(_mapper.Map<EmpresaDTO>(empresa));
+                return Ok(_response);
             }
             catch (Exception ex)
             {
@@ -113,7 +113,7 @@ namespace tcobro_API.Controllers
                 //Validacion personalizada
                 if (await _empresaRepositorio.Obtener(e => e.Nombre.ToLower() == empresaCreateDTO.Nombre.ToLower()) != null)
                 {
-                    ModelState.AddModelError("NombreExiste", "La empresa con ese Nombre ya existe");
+                    ModelState.AddModelError("ErrorMessages", "La empresa con ese Nombre ya existe");
                     return BadRequest(ModelState);
                 }
                 if (empresaCreateDTO == null)
@@ -142,7 +142,7 @@ namespace tcobro_API.Controllers
             return _response;
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("{id:int}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -181,7 +181,7 @@ namespace tcobro_API.Controllers
             return BadRequest(_response);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("{id:int}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> UpdateEmpresa(int id, [FromBody] EmpresaUpdateDTO empresaUpdateDTO)//A Update no se le puede pasar el tipo APIResponse por ser una interfaz
@@ -203,7 +203,7 @@ namespace tcobro_API.Controllers
             return Ok(_response);
         }
 
-        [HttpPatch("{id}")]
+        [HttpPatch("{id:int}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         //Utilizar en API solo propiedades  "path": "/nombre","op": "replace","value": "Nueva Empresa"

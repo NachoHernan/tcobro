@@ -19,5 +19,7 @@ namespace tcobro_API.Modelos.Dto
         [MaxLength(45)]
         public string Descripcion { get; set; }
 
+        public EmpresaDTO Empresa { get; set; } //Navegacion a propiedades de EmpresaDTO desde MaquinaDTO
+
     }
 }

@@ -1,0 +1,27 @@
+﻿@using Microsoft.AspNetCore.Components 
+@model IEnumerable<tcobro_WEB.Models.Dto.EmpresaDTO>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="row" style="--bs-gutter-x:0">
+    @foreach(var empresa in Model) //Referencia a la lista del modelo
+    {
+        <div class="p-4 col-md-12 col-lg-6">
+           <div class="row" style="border-radius:20px; border: 1px solid">
+              <div class="col-8">
+                    <p class="card-title text-info" style="font-size:x-large">@empresa.Nombre</p>
+              </div>
+              <div class="col-12">
+                 <div class="row pb-3 pt-2">
+                        <div class="col-12 col-sm-4">
+                         <a href="" class="btn btn-primary form-control btn-block">Entrar</a>
+                     </div>                     
+                 </div>                
+              </div>
+           </div>
+        </div>
+    }
+</div>
