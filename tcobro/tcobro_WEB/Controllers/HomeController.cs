@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Diagnostics;
+using tcobro_Utilidad;
 using tcobro_WEB.Models;
 using tcobro_WEB.Models.Dto;
 using tcobro_WEB.Services.IServices;
@@ -25,7 +26,7 @@ namespace tcobro_WEB.Controllers
         {
             List<EmpresaDTO> empresaList = new();
 
-            var response = await _empresaService.ObtenerTodos<APIResponse>();
+            var response = await _empresaService.ObtenerTodos<APIResponse>(HttpContext.Session.GetString(DefinicionesEstaticas.SessionToken));
 
             if(response != null && response.IsExitoso)
             {

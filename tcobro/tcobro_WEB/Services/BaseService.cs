@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http.HttpResults;
 using Newtonsoft.Json;
 using System.Net;
+using System.Net.Http.Headers;
 using System.Text;
 using tcobro_Utilidad;
 using tcobro_WEB.Models;
@@ -62,6 +63,13 @@ namespace tcobro_WEB.Services
 
                 //Invocacion de servicio enviando la solicitud
                 HttpResponseMessage apiResponse = null;
+
+                //Recibe el token para autorizacion y muestra de web
+                if(!string.IsNullOrEmpty(apiRequest.Token))
+                {
+                    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiRequest.Token);
+                }
+
                 apiResponse = await client.SendAsync(message);
 
                 var apiContent = await apiResponse.Content.ReadAsStringAsync();//Almacena el contenido de la respuesta

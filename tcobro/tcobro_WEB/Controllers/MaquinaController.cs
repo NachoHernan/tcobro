@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
+using tcobro_Utilidad;
 using tcobro_WEB.Models;
 using tcobro_WEB.Models.Dto;
 using tcobro_WEB.Models.ViewModel;
@@ -31,7 +32,7 @@ namespace tcobro_WEB.Controllers
 
             List<MaquinaDTO> maquinaList = new();
 
-            var response = await _maquinaService.ObtenerTodos<APIResponse>();
+            var response = await _maquinaService.ObtenerTodos<APIResponse>(HttpContext.Session.GetString(DefinicionesEstaticas.SessionToken));
 
             if(response != null && response.IsExitoso)
             {
@@ -51,7 +52,7 @@ namespace tcobro_WEB.Controllers
             //Llenar MaquinaViewModel
             MaquinaViewModel maquinaViewModel = new();
 
-            var response = await _empresaService.ObtenerTodos<APIResponse>();
+            var response = await _empresaService.ObtenerTodos<APIResponse>(HttpContext.Session.GetString(DefinicionesEstaticas.SessionToken));
 
             if(response != null && response.IsExitoso)
             {
@@ -73,7 +74,7 @@ namespace tcobro_WEB.Controllers
         {
             if(ModelState.IsValid)
             {
-                var response = await _maquinaService.Crear<APIResponse>(modelo.Maquina);
+                var response = await _maquinaService.Crear<APIResponse>(modelo.Maquina, HttpContext.Session.GetString(DefinicionesEstaticas.SessionToken));
 
                 if(response != null && response.IsExitoso)
                 {
@@ -91,7 +92,7 @@ namespace tcobro_WEB.Controllers
             }
 
             //En caso de que algo falle se vuelve a cargar la lista de Empresas
-            var res = await _empresaService.ObtenerTodos<APIResponse>();
+            var res = await _empresaService.ObtenerTodos<APIResponse>(HttpContext.Session.GetString(DefinicionesEstaticas.SessionToken));
 
             if (res != null && res.IsExitoso)
             {
@@ -112,7 +113,7 @@ namespace tcobro_WEB.Controllers
         {
             MaquinaUpdateViewModel maquinaUpdateViewModel = new();
 
-            var response = await _maquinaService.Obtener<APIResponse>(Id);
+            var response = await _maquinaService.Obtener<APIResponse>(Id, HttpContext.Session.GetString(DefinicionesEstaticas.SessionToken));
 
             if(response != null && response.IsExitoso)
             {
@@ -121,7 +122,7 @@ namespace tcobro_WEB.Controllers
                 maquinaUpdateViewModel.Maquina = _mapper.Map<MaquinaUpdateDTO>(modelo);
             }
 
-            response = await _empresaService.ObtenerTodos<APIResponse>();
+            response = await _empresaService.ObtenerTodos<APIResponse>(HttpContext.Session.GetString(DefinicionesEstaticas.SessionToken));
 
             if (response != null && response.IsExitoso)
             {
@@ -144,7 +145,7 @@ namespace tcobro_WEB.Controllers
         {
             if (ModelState.IsValid)
             {
-                var response = await _maquinaService.Actualizar<APIResponse>(modelo.Maquina);
+                var response = await _maquinaService.Actualizar<APIResponse>(modelo.Maquina, HttpContext.Session.GetString(DefinicionesEstaticas.SessionToken));
 
                 if (response != null && response.IsExitoso)
                 {
@@ -162,7 +163,7 @@ namespace tcobro_WEB.Controllers
             }
 
             //En caso de que algo falle se vuelve a cargar la lista de Empresas
-            var res = await _empresaService.ObtenerTodos<APIResponse>();
+            var res = await _empresaService.ObtenerTodos<APIResponse>(HttpContext.Session.GetString(DefinicionesEstaticas.SessionToken));
 
             if (res != null && res.IsExitoso)
             {
@@ -182,7 +183,7 @@ namespace tcobro_WEB.Controllers
         {
             MaquinaDeleteViewModel maquinaUpdateViewModel = new();
 
-            var response = await _maquinaService.Obtener<APIResponse>(Id);
+            var response = await _maquinaService.Obtener<APIResponse>(Id, HttpContext.Session.GetString(DefinicionesEstaticas.SessionToken));
 
             if (response != null && response.IsExitoso)
             {
@@ -191,7 +192,7 @@ namespace tcobro_WEB.Controllers
                 maquinaUpdateViewModel.Maquina =modelo;
             }
 
-            response = await _empresaService.ObtenerTodos<APIResponse>();
+            response = await _empresaService.ObtenerTodos<APIResponse>(HttpContext.Session.GetString(DefinicionesEstaticas.SessionToken));
 
             if (response != null && response.IsExitoso)
             {
@@ -211,7 +212,7 @@ namespace tcobro_WEB.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> RemoverMaquina(MaquinaDeleteViewModel modelo)
         {
-            var response = await _maquinaService.Remover<APIResponse>(modelo.Maquina.Id);
+            var response = await _maquinaService.Remover<APIResponse>(modelo.Maquina.Id, HttpContext.Session.GetString(DefinicionesEstaticas.SessionToken));
 
             if(response != null && response.IsExitoso)
             {

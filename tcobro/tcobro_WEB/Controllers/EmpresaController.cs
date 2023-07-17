@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using tcobro_Utilidad;
 using tcobro_WEB.Models;
 using tcobro_WEB.Models.Dto;
 using tcobro_WEB.Services.IServices;
@@ -24,7 +25,7 @@ namespace tcobro_WEB.Controllers
         {
             List<EmpresaDTO> empresaList = new(); //Trae una lista de todas las empresas
 
-            var response = await _empresaService.ObtenerTodos<APIResponse>(); //Obtiene todas las empresas
+            var response = await _empresaService.ObtenerTodos<APIResponse>(HttpContext.Session.GetString(DefinicionesEstaticas.SessionToken)); //Obtiene todas las empresas y autentica con token
 
             if(response != null && response.IsExitoso)
             {
@@ -50,7 +51,7 @@ namespace tcobro_WEB.Controllers
         {
             if(ModelState.IsValid)//Si estan todos los campos requeridos llenos
             {
-                var response = await _empresaService.Crear<APIResponse>(empresa);
+                var response = await _empresaService.Crear<APIResponse>(empresa, HttpContext.Session.GetString(DefinicionesEstaticas.SessionToken));
 
                 if(response != null && response.IsExitoso)
                 {
@@ -68,7 +69,7 @@ namespace tcobro_WEB.Controllers
         //Metodo GET recibe los datos y llama a la vista (Agregar vista siempre con GET [linea 23])
         public async Task<IActionResult> ActualizarEmpresa(int empresaId)
         {
-            var response = await _empresaService.Obtener<APIResponse>(empresaId);
+            var response = await _empresaService.Obtener<APIResponse>(empresaId, HttpContext.Session.GetString(DefinicionesEstaticas.SessionToken));
 
             if(response != null && response.IsExitoso)
             {
@@ -87,7 +88,7 @@ namespace tcobro_WEB.Controllers
         {
             if(ModelState.IsValid)//Si estan todos los campos requeridos llenos
             {
-                var response = await _empresaService.Actualizar<APIResponse>(empresa);
+                var response = await _empresaService.Actualizar<APIResponse>(empresa, HttpContext.Session.GetString(DefinicionesEstaticas.SessionToken));
 
                 if(response != null && response.IsExitoso)
                 {
@@ -106,7 +107,7 @@ namespace tcobro_WEB.Controllers
         //Metodo GET recibe los datos y llama a la vista (Agregar vista siempre con GET [linea 23])
         public async Task<IActionResult> RemoverEmpresa(int empresaId)
         {
-            var response = await _empresaService.Obtener<APIResponse>(empresaId);
+            var response = await _empresaService.Obtener<APIResponse>(empresaId, HttpContext.Session.GetString(DefinicionesEstaticas.SessionToken));
 
             if (response != null && response.IsExitoso)
             {
@@ -124,7 +125,7 @@ namespace tcobro_WEB.Controllers
         public async Task<IActionResult> RemoverEmpresa(EmpresaDTO empresa)
         {
             
-                var response = await _empresaService.Remover<APIResponse>(empresa.Id);
+                var response = await _empresaService.Remover<APIResponse>(empresa.Id, HttpContext.Session.GetString(DefinicionesEstaticas.SessionToken));
 
                 if (response != null && response.IsExitoso)
                 {

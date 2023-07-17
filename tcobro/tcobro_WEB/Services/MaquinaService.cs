@@ -18,50 +18,55 @@ namespace tcobro_WEB.Services
         }
 
 
-        public Task<T> Actualizar<T>(MaquinaUpdateDTO dto)
+        public Task<T> Actualizar<T>(MaquinaUpdateDTO dto, string token)
         {
             return SendAsync<T>(new APIRequest()
             {
                 APITipo = DefinicionesEstaticas.APITipo.PUT, //Define el metodo a ejecutar
                 Datos = dto, //Recoge los datos del dto que le estamos pasando
-                Url = _empresaUrl + "/api/Maquina/" + dto.Id //Se conecta con la API
+                Url = _empresaUrl + "/api/Maquina/" + dto.Id, //Se conecta con la API
+                Token = token
             });
         }
 
-        public Task<T> Crear<T>(MaquinaCreateDTO dto)
+        public Task<T> Crear<T>(MaquinaCreateDTO dto, string token)
         {
             return SendAsync<T>(new APIRequest()
             {
                 APITipo = DefinicionesEstaticas.APITipo.POST, 
                 Datos = dto, 
-                Url = _empresaUrl + "/api/Maquina"
+                Url = _empresaUrl + "/api/Maquina",
+                Token = token
             });
         }
 
-        public Task<T> Obtener<T>(int id)
+        public Task<T> Obtener<T>(int id, string token)
         {
             return SendAsync<T>(new APIRequest()
             {
                 APITipo = DefinicionesEstaticas.APITipo.GET, 
-                Url = _empresaUrl + "/api/Maquina/" + id 
+                Url = _empresaUrl + "/api/Maquina/" + id,
+                Token = token
             });
         }
 
-        public Task<T> ObtenerTodos<T>()
+        public Task<T> ObtenerTodos<T>(string token)
         {
             return SendAsync<T>(new APIRequest()
             {
                 APITipo = DefinicionesEstaticas.APITipo.GET,                 
-                Url = _empresaUrl + "/api/Maquina"
+                Url = _empresaUrl + "/api/Maquina",
+                Token = token
             });
         }
 
-        public Task<T> Remover<T>(int id)
+        public Task<T> Remover<T>(int id, string token)
         {
             return SendAsync<T>(new APIRequest()
             {
                 APITipo = DefinicionesEstaticas.APITipo.DELETE,
-                Url = _empresaUrl + "/api/Maquina/" + id
+                Url = _empresaUrl + "/api/Maquina/" + id,
+                Token = token
             });
         }       
 
