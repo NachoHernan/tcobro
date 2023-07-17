@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
@@ -12,6 +13,7 @@ using tcobro_API.Repositorio.IRepositorio;
 namespace tcobro_API.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]//Usuario autorizado para acceder al end-point
     [ApiController]
     public class EmpresaController : ControllerBase
     {
@@ -31,6 +33,7 @@ namespace tcobro_API.Controllers
 
         /*Obtener todas las empresas*/
         [HttpGet]//Define la ruta
+        [Authorize]//Usuario autorizado para acceder al end-point
         [ProducesResponseType(StatusCodes.Status200OK)] //Documenta el codigo de estado
         public async Task<ActionResult<APIResponse>> GetEmpresas()
         {
@@ -57,6 +60,7 @@ namespace tcobro_API.Controllers
 
         /*Obtener solo una Empresa*/
         [HttpGet("{id:int}", Name = "GetEmpresa")] //Parametro por el cual se borra - Ruta del metodo entre llaves para que no destruya la ruta
+        [Authorize]//Usuario autorizado para acceder al end-point
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -97,6 +101,7 @@ namespace tcobro_API.Controllers
 
         //Crear una empresa
         [HttpPost]
+        [Authorize(Roles = "admin")]//Unicamente siendo admin se puede acceder al end-point
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -143,6 +148,7 @@ namespace tcobro_API.Controllers
         }
 
         [HttpDelete("{id:int}")]
+        [Authorize(Roles = "admin")]//Unicamente siendo admin se puede acceder al end-point
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -182,6 +188,7 @@ namespace tcobro_API.Controllers
         }
 
         [HttpPut("{id:int}")]
+        [Authorize(Roles = "admin")]//Unicamente siendo admin se puede acceder al end-point
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> UpdateEmpresa(int id, [FromBody] EmpresaUpdateDTO empresaUpdateDTO)//A Update no se le puede pasar el tipo APIResponse por ser una interfaz
@@ -204,6 +211,7 @@ namespace tcobro_API.Controllers
         }
 
         [HttpPatch("{id:int}")]
+        [Authorize(Roles = "admin")]//Unicamente siendo admin se puede acceder al end-point
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         //Utilizar en API solo propiedades  "path": "/nombre","op": "replace","value": "Nueva Empresa"

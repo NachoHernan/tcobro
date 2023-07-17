@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 using System.Net;
 using tcobro_API.Datos;
 using tcobro_API.Modelos;
@@ -12,6 +14,7 @@ using tcobro_API.Repositorio.IRepositorio;
 namespace tcobro_API.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]//Usuario autorizado para acceder al end-point
     [ApiController]
     public class MaquinaController : ControllerBase
     {
@@ -34,6 +37,7 @@ namespace tcobro_API.Controllers
 
         /*Obtener todas las maquinas*/
         [HttpGet]//Define la ruta
+        [Authorize]//Usuario autorizado para acceder al end-point
         [ProducesResponseType(StatusCodes.Status200OK)] //Documenta el codigo de estado
         public async Task<ActionResult<APIResponse>> GetMaquinas()
         {
@@ -60,6 +64,7 @@ namespace tcobro_API.Controllers
 
         /*Obtener solo una Maquina*/
         [HttpGet("{id:int}", Name = "GetMaquina")] //Parametro por el cual se borra - Ruta del metodo
+        [Authorize]//Usuario autorizado para acceder al end-point
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -98,8 +103,9 @@ namespace tcobro_API.Controllers
             return _response;
         }
 
-        //Crear una empresa
+        /*Crear una maquina*/
         [HttpPost]
+        [Authorize(Roles = "admin")]//Unicamente siendo admin se puede acceder al end-point
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -155,7 +161,9 @@ namespace tcobro_API.Controllers
             return _response;
         }
 
+        /*Borrar una maquina*/
         [HttpDelete("{id:int}")]
+        [Authorize(Roles = "admin")]//Unicamente siendo admin se puede acceder al end-point
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -194,7 +202,9 @@ namespace tcobro_API.Controllers
             return BadRequest(_response);
         }
 
+        /*Actualizar una maquina*/
         [HttpPut("{id:int}")]
+        [Authorize(Roles = "admin")]//Unicamente siendo admin se puede acceder al end-point
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> UpdateMaquina(int id, [FromBody] MaquinaUpdateDTO maquinaUpdateDTO)//A Update no se le puede pasar el tipo APIResponse por ser una interfaz
