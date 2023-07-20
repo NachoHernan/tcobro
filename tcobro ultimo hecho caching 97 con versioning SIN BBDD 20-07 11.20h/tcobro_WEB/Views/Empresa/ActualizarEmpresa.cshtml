@@ -1,0 +1,48 @@
+﻿<!--Para pasar el modelo lo tenemos que recibir como en la linea 3-->
+<!--Lista de tipo NombreDelProyecto<Ruta>-->
+@model tcobro_WEB.Models.Dto.EmpresaUpdateDTO
+
+
+@{
+    ViewData["Title"] = "ActualizarEmpresa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!--Envio de datos siempre con formulario POST-->
+<form method="post" asp-action="ActualizarEmpresa">
+
+    <div class="container border p-3">
+        <!--Contenedor || Borde || Padding-->
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div> <!--Errores del modelo(falta de propiedad requerida...)-->
+
+        <input hidden asp-for="Id" /><!--Incluye en Id oculto en el FORM y en el POST-->
+
+        <div class="row"><!--Fila-->
+           
+            <h2 class="text-info">Actualizar Empresa</h2><!--Titulo-->
+        </div>
+
+
+        <!--Copiar y pegar para mas campos(descripcion,imagen,detalles)-->
+        <div class="row mt-2">
+            <!--Fila Margin Top-->
+            <div class="col-md-6"><!--Columna de tamaño mediano-->                
+                <label class="form-label">Nombre de la Empresa</label><!--Clase de Bootstrap-->
+                <input asp-for="Nombre" class="form-control" /><!--Relacion con propiedad del modelo-->
+                <span asp-validation-for="Nombre" class="text-danger"></span><!--Mensaje de error (Campo requerido...)-->
+            </div>
+        </div>
+
+
+        <!--Botones-->
+        <div class="d-grid gap-2 d-md-block mt-2">
+            <button type="submit" class="btn btn-primary">Actualizar</button><!--Siempre de type="submit" para enviar la informacion al POST de cada uno de los campos input que encuentre-->
+            <a asp-controller="Empresa" asp-action="IndexEmpresa" class="btn btn-success">Volver</a><!--Boton de enlace <a> para ir a otra vista, Controlador || Vista || Estilos Bootstrap-->
+        </div>
+    </div>
+</form>
+
+
+<!--Validaciones de la vista gracias a seccion de Scripts implantados:-->
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" /> <!--Llamada a la vista generada por defecto-->
+}

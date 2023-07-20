@@ -1,0 +1,56 @@
+﻿<!--Agregar el modelo que va a recibir la vista (linea 2)-->
+@model tcobro_WEB.Models.ViewModel.MaquinaUpdateViewModel
+
+@{
+    ViewData["Title"] = "ActualizarMaquina";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form method="post" asp-action="ActualizarMaquina">
+    <div class="container border p-3">
+        <div asp-validation-summary="All" class="text-danger"></div>
+
+        <input asp-for="Maquina.Id" hidden />
+        <input asp-for="Maquina.EmpresaId" hidden />
+        <input asp-for="Maquina.NumeroDeSerie" hidden />
+
+        <div class="row">
+            <h2 class="text-info">Actualizar Maquina</h2>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-6">
+                <label class="form-label">Numero de Serie</label>
+                <input asp-for="Maquina.NumeroDeSerie" disabled class="form-control" />
+                <span asp-validation-for="Maquina.NumeroDeSerie" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-6">
+                <label class="form-label">Empresa</label>
+                <select asp-for="Maquina.EmpresaId" disabled class="form-select" asp-items="@Model.MaquinaList">
+                    <option value="">-- Seleccione una Empresa --</option>
+                </select>
+                <span asp-validation-for="Maquina.EmpresaId" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-6">
+                <label class="form-label">Descripcion</label>
+                <textarea asp-for="Maquina.Descripcion" class="form-control"></textarea>
+                <span asp-validation-for="Maquina.Descripcion" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="d-grid gap-2 d-md-block mt-2">
+            <button type="submit" class="btn btn-primary">Actualizar</button>
+            <a asp-controller="Maquina" asp-action="IndexMaquina" class="btn btn-success">Volver</a>
+        </div>
+
+    </div>
+</form>
+
+
+

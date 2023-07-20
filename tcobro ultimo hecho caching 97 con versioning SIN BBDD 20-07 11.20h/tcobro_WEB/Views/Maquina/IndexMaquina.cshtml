@@ -1,0 +1,60 @@
+﻿<!--Para pasar el modelo lo tenemos que recibir como en la linea 3-->
+<!--Lista de tipo NombreDelProyecto<Ruta>-->
+@model IEnumerable<tcobro_WEB.Models.Dto.MaquinaDTO>
+
+@{
+    ViewData["Title"] = "IndexMaquina";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container p-4 border">
+    <!--Contenedor || Padding || Borde-->
+    <div class="row pb-2">
+        <!--Fila-->
+
+        <div class="col">
+            <!--Columna-->
+            <h1 class="text-primary">Lista de Maquinas</h1><!--Titulo-->
+        </div>
+
+        <div class="col tex-end pt-1">
+            <!--Alinear columna a la derecha || PaddingTop-->
+            <!--Boton de enlace || Controlador || Metodo || Estilo || Icono de Bootstrap enlace IconFont-->
+            <a asp-controller="Maquina" asp-action="CrearMaquina" class="btn btn-outline-primary"><i class="bi bi-plus-square-fill"></i>Crear Nueva Maquina</a>
+
+        </div>
+    </div>
+
+    <table class="table">
+        <!--Crea una tabla-->
+        <thead>
+            <!--Cabecera-->
+            <tr>
+                <!--Fila-->
+                <th>Nombre de la Empresa</th><!--Columna-->
+                <th>Numero de Serie de la Maquina</th>
+                <th></th><!--Vacio para visualizar botones-->
+            </tr>
+        </thead>
+
+        <tbody>
+            <!--Cuerpo de la tabla para recorrer el model(linea 3)-->
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <!--Fila en negrita-->
+                    <td>@item.Empresa.Nombre</td><!--Fila suave--> <!--Navegacion por MaquinaDTO para acceder a propiedades de EmpresaDTO-->
+                    <td>@item.NumeroDeSerie</td>
+                    <!--Botones a presentar (sin titulo)-->
+                    <td>
+                        <!-- asp-route-(empresaId)=item.Id : Pasa el parametro al metodo -->
+                        <a asp-controller="Maquina" asp-action="ActualizarMaquina" asp-route-Id="@item.Id" class="btn btn-success"><i class="bi bi-pencil-square"></i></a>
+                        <a asp-controller="Maquina" asp-action="RemoverMaquina" asp-route-Id="@item.Id" class="btn btn-danger"><i class="bi bi-trash-fill"></i> </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+

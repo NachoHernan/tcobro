@@ -1,0 +1,11 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = tcobro_Utilidad
+build_property.ProjectDir = C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro ultimo hecho caching 97 con versioning SIN BBDD 20-07 11.20h\tcobro_Utilidad\
