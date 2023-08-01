@@ -1,0 +1,46 @@
+﻿@using Microsoft.AspNetCore.Components 
+@model tcobro_WEB.Models.ViewModel.EmpresaPaginadoViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="row" style="--bs-gutter-x:0">
+    @foreach(var empresa in Model.EmpresaList) //Referencia a la lista del modelo
+    {
+        <div class="p-4 col-md-12 col-lg-6">
+           <div class="row" style="border-radius:20px; border: 1px solid">
+              <div class="col-8">
+                    <p class="card-title text-info" style="font-size:x-large">@empresa.Nombre</p>
+              </div>
+              <div class="col-12">
+                 <div class="row pb-3 pt-2">
+                        <div class="col-12 col-sm-4">
+                         <a href="" class="btn btn-primary form-control btn-block">Entrar</a>
+                     </div>                     
+                 </div>                
+              </div>
+           </div>
+        </div>
+    }
+</div>
+
+
+
+<!--Botones de Navegacion-->
+
+<!--Primera Pagina-->
+<a asp-action="Index" asp-route-numeroDePagina="@(1)" class="btn btn-outline-primary  000000"><i class="bi bi-skip-start-fill"></i></a>
+
+<!--Pagina Anterior-->
+<a asp-action="Index" asp-route-numeroDePagina="@(Model.NumeroDePagina - 1)" class="btn btn-outline-primary @Model.Anterior">Anterior</a>
+
+<!--Detalla en que pagina nos encontramos y el total de paginas existentes-->
+<span>Pagina @Model.NumeroDePagina de @Model.PaginasTotales </span>
+
+<!--Pagina Siguiente-->
+<a asp-action="Index" asp-route-numeroDePagina="@(Model.NumeroDePagina + 1)" class="btn btn-outline-primary @Model.Siguiente">Siguiente</a>
+
+<!--Ultima Pagina -->
+<a asp-action="Index" asp-route-numeroDePagina="@Model.PaginasTotales" class="btn btn-outline-primary"><i class="bi bi-skip-end-fill"></i></a>

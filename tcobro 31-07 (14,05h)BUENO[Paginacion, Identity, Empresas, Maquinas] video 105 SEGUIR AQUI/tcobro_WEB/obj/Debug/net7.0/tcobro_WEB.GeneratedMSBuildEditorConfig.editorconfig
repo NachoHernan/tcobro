@@ -1,0 +1,93 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = tcobro_WEB
+build_property.RootNamespace = tcobro_WEB
+build_property.ProjectDir = C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro 31-07 (14,05h)BUENO[Paginacion, Identity, Empresas, Maquinas] video 105 SEGUIR AQUI\tcobro_WEB\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro 31-07 (14,05h)BUENO[Paginacion, Identity, Empresas, Maquinas] video 105 SEGUIR AQUI\tcobro_WEB
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/SP/OneDrive - Sistemas de T-Cobro S.L/Desarrollo/Estable/tcobro 31-07 (14\,05h)BUENO\[Paginacion\, Identity\, Empresas\, Maquinas\] video 105 SEGUIR AQUI/tcobro_WEB/Views/Empresa/ActualizarEmpresa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYVxBY3R1YWxpemFyRW1wcmVzYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SP/OneDrive - Sistemas de T-Cobro S.L/Desarrollo/Estable/tcobro 31-07 (14\,05h)BUENO\[Paginacion\, Identity\, Empresas\, Maquinas\] video 105 SEGUIR AQUI/tcobro_WEB/Views/Empresa/CrearEmpresa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYVxDcmVhckVtcHJlc2EuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SP/OneDrive - Sistemas de T-Cobro S.L/Desarrollo/Estable/tcobro 31-07 (14\,05h)BUENO\[Paginacion\, Identity\, Empresas\, Maquinas\] video 105 SEGUIR AQUI/tcobro_WEB/Views/Empresa/IndexEmpresa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYVxJbmRleEVtcHJlc2EuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SP/OneDrive - Sistemas de T-Cobro S.L/Desarrollo/Estable/tcobro 31-07 (14\,05h)BUENO\[Paginacion\, Identity\, Empresas\, Maquinas\] video 105 SEGUIR AQUI/tcobro_WEB/Views/Empresa/RemoverEmpresa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYVxSZW1vdmVyRW1wcmVzYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SP/OneDrive - Sistemas de T-Cobro S.L/Desarrollo/Estable/tcobro 31-07 (14\,05h)BUENO\[Paginacion\, Identity\, Empresas\, Maquinas\] video 105 SEGUIR AQUI/tcobro_WEB/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SP/OneDrive - Sistemas de T-Cobro S.L/Desarrollo/Estable/tcobro 31-07 (14\,05h)BUENO\[Paginacion\, Identity\, Empresas\, Maquinas\] video 105 SEGUIR AQUI/tcobro_WEB/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SP/OneDrive - Sistemas de T-Cobro S.L/Desarrollo/Estable/tcobro 31-07 (14\,05h)BUENO\[Paginacion\, Identity\, Empresas\, Maquinas\] video 105 SEGUIR AQUI/tcobro_WEB/Views/Maquina/ActualizarMaquina.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFxdWluYVxBY3R1YWxpemFyTWFxdWluYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SP/OneDrive - Sistemas de T-Cobro S.L/Desarrollo/Estable/tcobro 31-07 (14\,05h)BUENO\[Paginacion\, Identity\, Empresas\, Maquinas\] video 105 SEGUIR AQUI/tcobro_WEB/Views/Maquina/CrearMaquina.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFxdWluYVxDcmVhck1hcXVpbmEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SP/OneDrive - Sistemas de T-Cobro S.L/Desarrollo/Estable/tcobro 31-07 (14\,05h)BUENO\[Paginacion\, Identity\, Empresas\, Maquinas\] video 105 SEGUIR AQUI/tcobro_WEB/Views/Maquina/IndexMaquina.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFxdWluYVxJbmRleE1hcXVpbmEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SP/OneDrive - Sistemas de T-Cobro S.L/Desarrollo/Estable/tcobro 31-07 (14\,05h)BUENO\[Paginacion\, Identity\, Empresas\, Maquinas\] video 105 SEGUIR AQUI/tcobro_WEB/Views/Maquina/RemoverMaquina.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFxdWluYVxSZW1vdmVyTWFxdWluYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SP/OneDrive - Sistemas de T-Cobro S.L/Desarrollo/Estable/tcobro 31-07 (14\,05h)BUENO\[Paginacion\, Identity\, Empresas\, Maquinas\] video 105 SEGUIR AQUI/tcobro_WEB/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SP/OneDrive - Sistemas de T-Cobro S.L/Desarrollo/Estable/tcobro 31-07 (14\,05h)BUENO\[Paginacion\, Identity\, Empresas\, Maquinas\] video 105 SEGUIR AQUI/tcobro_WEB/Views/Shared/_Notificacion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ob3RpZmljYWNpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SP/OneDrive - Sistemas de T-Cobro S.L/Desarrollo/Estable/tcobro 31-07 (14\,05h)BUENO\[Paginacion\, Identity\, Empresas\, Maquinas\] video 105 SEGUIR AQUI/tcobro_WEB/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SP/OneDrive - Sistemas de T-Cobro S.L/Desarrollo/Estable/tcobro 31-07 (14\,05h)BUENO\[Paginacion\, Identity\, Empresas\, Maquinas\] video 105 SEGUIR AQUI/tcobro_WEB/Views/Usuario/AccesoDenegado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xBY2Nlc29EZW5lZ2Fkby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SP/OneDrive - Sistemas de T-Cobro S.L/Desarrollo/Estable/tcobro 31-07 (14\,05h)BUENO\[Paginacion\, Identity\, Empresas\, Maquinas\] video 105 SEGUIR AQUI/tcobro_WEB/Views/Usuario/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SP/OneDrive - Sistemas de T-Cobro S.L/Desarrollo/Estable/tcobro 31-07 (14\,05h)BUENO\[Paginacion\, Identity\, Empresas\, Maquinas\] video 105 SEGUIR AQUI/tcobro_WEB/Views/Usuario/Registrar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xSZWdpc3RyYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SP/OneDrive - Sistemas de T-Cobro S.L/Desarrollo/Estable/tcobro 31-07 (14\,05h)BUENO\[Paginacion\, Identity\, Empresas\, Maquinas\] video 105 SEGUIR AQUI/tcobro_WEB/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SP/OneDrive - Sistemas de T-Cobro S.L/Desarrollo/Estable/tcobro 31-07 (14\,05h)BUENO\[Paginacion\, Identity\, Empresas\, Maquinas\] video 105 SEGUIR AQUI/tcobro_WEB/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SP/OneDrive - Sistemas de T-Cobro S.L/Desarrollo/Estable/tcobro 31-07 (14\,05h)BUENO\[Paginacion\, Identity\, Empresas\, Maquinas\] video 105 SEGUIR AQUI/tcobro_WEB/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-wk4u2qyq6e

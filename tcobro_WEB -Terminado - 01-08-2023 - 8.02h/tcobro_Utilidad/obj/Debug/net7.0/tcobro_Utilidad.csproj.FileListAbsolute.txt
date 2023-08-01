@@ -1,0 +1,96 @@
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro\tcobro_Utilidad\bin\Debug\net7.0\tcobro_Utilidad.deps.json
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro\tcobro_Utilidad\bin\Debug\net7.0\tcobro_Utilidad.dll
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro\tcobro_Utilidad\bin\Debug\net7.0\tcobro_Utilidad.pdb
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.csproj.AssemblyReference.cache
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.GeneratedMSBuildEditorConfig.editorconfig
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.AssemblyInfoInputs.cache
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.AssemblyInfo.cs
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.csproj.CoreCompileInputs.cache
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.dll
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro\tcobro_Utilidad\obj\Debug\net7.0\refint\tcobro_Utilidad.dll
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.pdb
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro\tcobro_Utilidad\obj\Debug\net7.0\ref\tcobro_Utilidad.dll
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro FINALIZADO\tcobro_Utilidad\bin\Debug\net7.0\tcobro_Utilidad.deps.json
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro FINALIZADO\tcobro_Utilidad\bin\Debug\net7.0\tcobro_Utilidad.dll
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro FINALIZADO\tcobro_Utilidad\bin\Debug\net7.0\tcobro_Utilidad.pdb
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro FINALIZADO\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.csproj.AssemblyReference.cache
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro FINALIZADO\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.GeneratedMSBuildEditorConfig.editorconfig
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro FINALIZADO\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.AssemblyInfoInputs.cache
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro FINALIZADO\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.AssemblyInfo.cs
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro FINALIZADO\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.csproj.CoreCompileInputs.cache
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro FINALIZADO\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.dll
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro FINALIZADO\tcobro_Utilidad\obj\Debug\net7.0\refint\tcobro_Utilidad.dll
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro FINALIZADO\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.pdb
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro FINALIZADO\tcobro_Utilidad\obj\Debug\net7.0\ref\tcobro_Utilidad.dll
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro FINALIZADO ultimo hecho caching 97\tcobro_Utilidad\bin\Debug\net7.0\tcobro_Utilidad.deps.json
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro FINALIZADO ultimo hecho caching 97\tcobro_Utilidad\bin\Debug\net7.0\tcobro_Utilidad.dll
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro FINALIZADO ultimo hecho caching 97\tcobro_Utilidad\bin\Debug\net7.0\tcobro_Utilidad.pdb
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro FINALIZADO ultimo hecho caching 97\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.csproj.AssemblyReference.cache
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro FINALIZADO ultimo hecho caching 97\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.GeneratedMSBuildEditorConfig.editorconfig
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro FINALIZADO ultimo hecho caching 97\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.AssemblyInfoInputs.cache
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro FINALIZADO ultimo hecho caching 97\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.AssemblyInfo.cs
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro FINALIZADO ultimo hecho caching 97\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.csproj.CoreCompileInputs.cache
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro FINALIZADO ultimo hecho caching 97\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.dll
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro FINALIZADO ultimo hecho caching 97\tcobro_Utilidad\obj\Debug\net7.0\refint\tcobro_Utilidad.dll
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro FINALIZADO ultimo hecho caching 97\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.pdb
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro FINALIZADO ultimo hecho caching 97\tcobro_Utilidad\obj\Debug\net7.0\ref\tcobro_Utilidad.dll
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro ultimo hecho caching 97 con versioning SIN BBDD 20-07 11.20h\tcobro_Utilidad\bin\Debug\net7.0\tcobro_Utilidad.deps.json
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro ultimo hecho caching 97 con versioning SIN BBDD 20-07 11.20h\tcobro_Utilidad\bin\Debug\net7.0\tcobro_Utilidad.dll
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro ultimo hecho caching 97 con versioning SIN BBDD 20-07 11.20h\tcobro_Utilidad\bin\Debug\net7.0\tcobro_Utilidad.pdb
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro ultimo hecho caching 97 con versioning SIN BBDD 20-07 11.20h\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.csproj.AssemblyReference.cache
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro ultimo hecho caching 97 con versioning SIN BBDD 20-07 11.20h\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.GeneratedMSBuildEditorConfig.editorconfig
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro ultimo hecho caching 97 con versioning SIN BBDD 20-07 11.20h\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.AssemblyInfoInputs.cache
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro ultimo hecho caching 97 con versioning SIN BBDD 20-07 11.20h\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.AssemblyInfo.cs
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro ultimo hecho caching 97 con versioning SIN BBDD 20-07 11.20h\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.csproj.CoreCompileInputs.cache
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro ultimo hecho caching 97 con versioning SIN BBDD 20-07 11.20h\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.dll
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro ultimo hecho caching 97 con versioning SIN BBDD 20-07 11.20h\tcobro_Utilidad\obj\Debug\net7.0\refint\tcobro_Utilidad.dll
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro ultimo hecho caching 97 con versioning SIN BBDD 20-07 11.20h\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.pdb
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro ultimo hecho caching 97 con versioning SIN BBDD 20-07 11.20h\tcobro_Utilidad\obj\Debug\net7.0\ref\tcobro_Utilidad.dll
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo\tcobro_Utilidad\bin\Debug\net7.0\tcobro_Utilidad.deps.json
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo\tcobro_Utilidad\bin\Debug\net7.0\tcobro_Utilidad.dll
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo\tcobro_Utilidad\bin\Debug\net7.0\tcobro_Utilidad.pdb
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.csproj.AssemblyReference.cache
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.GeneratedMSBuildEditorConfig.editorconfig
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.AssemblyInfoInputs.cache
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.AssemblyInfo.cs
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.csproj.CoreCompileInputs.cache
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.dll
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo\tcobro_Utilidad\obj\Debug\net7.0\refint\tcobro_Utilidad.dll
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.pdb
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo\tcobro_Utilidad\obj\Debug\net7.0\ref\tcobro_Utilidad.dll
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo SEGUIR.TXT 21-07  13.26h CAMBIAR NOMBRE A TCOBRO\tcobro_Utilidad\bin\Debug\net7.0\tcobro_Utilidad.deps.json
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo SEGUIR.TXT 21-07  13.26h CAMBIAR NOMBRE A TCOBRO\tcobro_Utilidad\bin\Debug\net7.0\tcobro_Utilidad.dll
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo SEGUIR.TXT 21-07  13.26h CAMBIAR NOMBRE A TCOBRO\tcobro_Utilidad\bin\Debug\net7.0\tcobro_Utilidad.pdb
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo SEGUIR.TXT 21-07  13.26h CAMBIAR NOMBRE A TCOBRO\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.csproj.AssemblyReference.cache
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo SEGUIR.TXT 21-07  13.26h CAMBIAR NOMBRE A TCOBRO\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.GeneratedMSBuildEditorConfig.editorconfig
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo SEGUIR.TXT 21-07  13.26h CAMBIAR NOMBRE A TCOBRO\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.AssemblyInfoInputs.cache
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo SEGUIR.TXT 21-07  13.26h CAMBIAR NOMBRE A TCOBRO\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.AssemblyInfo.cs
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo SEGUIR.TXT 21-07  13.26h CAMBIAR NOMBRE A TCOBRO\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.csproj.CoreCompileInputs.cache
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo SEGUIR.TXT 21-07  13.26h CAMBIAR NOMBRE A TCOBRO\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.dll
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo SEGUIR.TXT 21-07  13.26h CAMBIAR NOMBRE A TCOBRO\tcobro_Utilidad\obj\Debug\net7.0\refint\tcobro_Utilidad.dll
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo SEGUIR.TXT 21-07  13.26h CAMBIAR NOMBRE A TCOBRO\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.pdb
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo SEGUIR.TXT 21-07  13.26h CAMBIAR NOMBRE A TCOBRO\tcobro_Utilidad\obj\Debug\net7.0\ref\tcobro_Utilidad.dll
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo SEGUIR.TXT 21-07  13.26h (antes de vacaciones) CAMBIAR NOMBRE A TCOBRO\tcobro_Utilidad\bin\Debug\net7.0\tcobro_Utilidad.deps.json
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo SEGUIR.TXT 21-07  13.26h (antes de vacaciones) CAMBIAR NOMBRE A TCOBRO\tcobro_Utilidad\bin\Debug\net7.0\tcobro_Utilidad.dll
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo SEGUIR.TXT 21-07  13.26h (antes de vacaciones) CAMBIAR NOMBRE A TCOBRO\tcobro_Utilidad\bin\Debug\net7.0\tcobro_Utilidad.pdb
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo SEGUIR.TXT 21-07  13.26h (antes de vacaciones) CAMBIAR NOMBRE A TCOBRO\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.csproj.AssemblyReference.cache
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo SEGUIR.TXT 21-07  13.26h (antes de vacaciones) CAMBIAR NOMBRE A TCOBRO\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.GeneratedMSBuildEditorConfig.editorconfig
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo SEGUIR.TXT 21-07  13.26h (antes de vacaciones) CAMBIAR NOMBRE A TCOBRO\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.AssemblyInfoInputs.cache
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo SEGUIR.TXT 21-07  13.26h (antes de vacaciones) CAMBIAR NOMBRE A TCOBRO\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.AssemblyInfo.cs
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo SEGUIR.TXT 21-07  13.26h (antes de vacaciones) CAMBIAR NOMBRE A TCOBRO\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.csproj.CoreCompileInputs.cache
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo SEGUIR.TXT 21-07  13.26h (antes de vacaciones) CAMBIAR NOMBRE A TCOBRO\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.dll
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo SEGUIR.TXT 21-07  13.26h (antes de vacaciones) CAMBIAR NOMBRE A TCOBRO\tcobro_Utilidad\obj\Debug\net7.0\refint\tcobro_Utilidad.dll
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo SEGUIR.TXT 21-07  13.26h (antes de vacaciones) CAMBIAR NOMBRE A TCOBRO\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.pdb
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro desarrollo SEGUIR.TXT 21-07  13.26h (antes de vacaciones) CAMBIAR NOMBRE A TCOBRO\tcobro_Utilidad\obj\Debug\net7.0\ref\tcobro_Utilidad.dll
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro 31-07 (14,05h)BUENO[Paginacion, Identity, Empresas, Maquinas] video 105 SEGUIR AQUI\tcobro_Utilidad\bin\Debug\net7.0\tcobro_Utilidad.deps.json
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro 31-07 (14,05h)BUENO[Paginacion, Identity, Empresas, Maquinas] video 105 SEGUIR AQUI\tcobro_Utilidad\bin\Debug\net7.0\tcobro_Utilidad.dll
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro 31-07 (14,05h)BUENO[Paginacion, Identity, Empresas, Maquinas] video 105 SEGUIR AQUI\tcobro_Utilidad\bin\Debug\net7.0\tcobro_Utilidad.pdb
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro 31-07 (14,05h)BUENO[Paginacion, Identity, Empresas, Maquinas] video 105 SEGUIR AQUI\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.csproj.AssemblyReference.cache
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro 31-07 (14,05h)BUENO[Paginacion, Identity, Empresas, Maquinas] video 105 SEGUIR AQUI\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.GeneratedMSBuildEditorConfig.editorconfig
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro 31-07 (14,05h)BUENO[Paginacion, Identity, Empresas, Maquinas] video 105 SEGUIR AQUI\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.AssemblyInfoInputs.cache
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro 31-07 (14,05h)BUENO[Paginacion, Identity, Empresas, Maquinas] video 105 SEGUIR AQUI\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.AssemblyInfo.cs
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro 31-07 (14,05h)BUENO[Paginacion, Identity, Empresas, Maquinas] video 105 SEGUIR AQUI\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.csproj.CoreCompileInputs.cache
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro 31-07 (14,05h)BUENO[Paginacion, Identity, Empresas, Maquinas] video 105 SEGUIR AQUI\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.dll
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro 31-07 (14,05h)BUENO[Paginacion, Identity, Empresas, Maquinas] video 105 SEGUIR AQUI\tcobro_Utilidad\obj\Debug\net7.0\refint\tcobro_Utilidad.dll
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro 31-07 (14,05h)BUENO[Paginacion, Identity, Empresas, Maquinas] video 105 SEGUIR AQUI\tcobro_Utilidad\obj\Debug\net7.0\tcobro_Utilidad.pdb
+C:\SP\OneDrive - Sistemas de T-Cobro S.L\Desarrollo\Estable\tcobro 31-07 (14,05h)BUENO[Paginacion, Identity, Empresas, Maquinas] video 105 SEGUIR AQUI\tcobro_Utilidad\obj\Debug\net7.0\ref\tcobro_Utilidad.dll

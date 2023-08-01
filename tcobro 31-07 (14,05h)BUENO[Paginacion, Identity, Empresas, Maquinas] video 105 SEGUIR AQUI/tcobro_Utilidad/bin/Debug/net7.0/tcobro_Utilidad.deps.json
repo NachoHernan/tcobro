@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "tcobro_Utilidad/1.0.0": {
+        "runtime": {
+          "tcobro_Utilidad.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "tcobro_Utilidad/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
